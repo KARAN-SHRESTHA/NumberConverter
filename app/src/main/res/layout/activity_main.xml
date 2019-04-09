@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/tvNumber"
+        android:text="Enter Number"
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvNumber"
+        android:layout_margin="20dp"
+        android:textSize="30dp"
+        android:id="@+id/etNumber"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Convert"
+        android:layout_below="@id/etNumber"
+        android:layout_centerInParent="true"
+        android:id="@+id/btnConvert"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Number"
+        android:layout_below="@+id/btnConvert"
+        android:layout_margin="20dp"
+        android:id="@+id/tvOut"
+        />
+
+</RelativeLayout>
