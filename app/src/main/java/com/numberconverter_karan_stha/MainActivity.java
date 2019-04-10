@@ -34,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 if (validate())
                 {
 
-
-
+                    int Number = Integer.parseInt(etNumber.getText().toString());
+                    Covert c = new Covert();
+                    String word = c.numberToWord(Number);
+                    tvOut.setText(word);
                 }
 
             }
@@ -50,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Validating for Empty Text
         if (TextUtils.isEmpty(etNumber.getText().toString())) {
-            etNumber.setError("Enter Height");
+            etNumber.setError("Enter Number");
             etNumber.requestFocus();
             flag = false;
         }
         else if (!m1.find())    //validating for number only
         {
             Toast.makeText(getApplicationContext(), "Enter a valid number", Toast.LENGTH_LONG).show();
-            etNumber.setError("Enter Valid Height Number");
+            etNumber.setError("Enter Valid Number");
             etNumber.requestFocus();
             flag = false;
         }
